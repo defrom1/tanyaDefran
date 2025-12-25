@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TanyaDefran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+    }
+
+    .kotak {
+      background: white;
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px gray;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="kotak">
+    <h2>TanyaDefran</h2>
+    <p>Cari jawaban pelajaran</p>
+
+    <input type="text" id="pertanyaan" placeholder="Tulis pertanyaan di sini">
+    <br>
+    <button onclick="cari()">Cari</button>
+
+    <p id="jawaban"></p>
+  </div>
+
+  <script>
+    function cari() {
+      var tanya = document.getElementById("pertanyaan").value.toLowerCase();
+      var jawab = document.getElementById("jawaban");
+
+      if (tanya == "apa itu html") {
+        jawab.innerHTML = "HTML adalah bahasa untuk membuat website.";
+      } else {
+        jawab.innerHTML = "Jawaban belum tersedia";
+      }
+    }
+  </script>
+
+</body>
+</html>
